@@ -1,19 +1,9 @@
 <idea-plugin>
     <id>com.github.jonnyzzz.intellijpluginindexrepo</id>
-    <name>intellij-plugin-index-repo</name>
+    <name>intellij-index-repo</name>
     <vendor>jonnyzzz</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.jonnyzzz.intellijpluginindexrepo.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.jonnyzzz.intellijpluginindexrepo.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.jonnyzzz.intellijpluginindexrepo.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
